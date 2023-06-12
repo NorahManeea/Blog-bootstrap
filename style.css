@@ -13,28 +13,73 @@ body {
 }
 
 /* Navbar */
-.navbar {
-  background-color: var(--purple);
+
+.btn{
+  background-color: var(--orange);
+  width: 140px;
+  border: none;
+
+}
+/* Hero */
+
+.hero{
+  padding: 15rem 0;
+  background-image: url('assets/bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 90vh;
+
+}
+.hero h1{
+  color: var(--snow);
+  font-weight: bolder;
+  font-size: 15rem;
+}
+.hero p{
+  color: var(--snow);
 }
 
 /* Cards */
+
 .link{
   color: var(--orange);
 }
 .link:hover{
   color: var(--light-purple);
 }
+
+.blog{
+  padding: 15rem 0;
+  background-image: url('assets/Blog.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 20vh;
+
+}
+.blog h1{
+  color: var(--snow);
+  font-weight: bolder;
+  font-size: 3rem;
+
+}
+.blog p{
+  color: var(--snow);
+
+}
+#imp{
+  height: 10vh;
+  background-color: var(--light-purple);
+}
+
 /* Footer */
 footer {
   background-color: var(--snow);
   color: var(--purple);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15vh;
-  font-size: 20px;
-  font-style: normal;
-  margin-top: 2rem;
+  
 }
 
 
