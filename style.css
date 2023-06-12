@@ -13,12 +13,18 @@ body {
 }
 
 /* Navbar */
+.navbar{
+  background-color: var(--purple);
+}
 
 .btn{
   background-color: var(--orange);
   width: 140px;
   border: none;
 
+}
+.btn:hover{
+  background-color: var(--light-purple);
 }
 /* Hero */
 
@@ -73,6 +79,7 @@ body {
 #imp{
   height: 10vh;
   background-color: var(--light-purple);
+  color: var(--snow);
 }
 
 /* Footer */
