@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Blog</title>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
       <div class="container">
-        <a class="navbar-brand" href="#">Blog</a>
+        <a class="navbar-brand" href="index.html">Blog</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -31,10 +31,10 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">Articles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
             </li>
           </ul>
 
@@ -42,13 +42,10 @@
         </div>
       </div>
     </nav>
-
-    <header
-      class="blog position-relative d-flex align-items-center text-center"
-      id="blog"
-    >
-      <div class="container position-relative text-align-center">
-        <h1 class="fw-bold">Articles</h1>
+    <!-- Hero -->
+    <header class="blog d-flex align-items-center text-center" id="blog">
+      <div class="container text-align-center">
+        <h1 class="fw-bold pt-5">Articles</h1>
         <p class="pb-5 pt-3 fw-normal">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -57,16 +54,7 @@
         </p>
       </div>
     </header>
-
-    <!-- <section class="imp position-relative d-flex align-items-center text-center m-5" id="imp">
-        <img src="./assets/Icon.svg" class="float-start pt-0"/>
-        <div class="container position-relative text-align-center">
-            
-            <h5 class="fw-bold ">The best way to learn programming is to make coding a regular thing and work hard.</h5>
-
-        </div>
-      </section> -->
-
+    <!-- Advise -->
     <div
       class="container text-center mt-5 d-flex justify-content-center align-items-center rounded"
       id="imp"
@@ -80,7 +68,7 @@
         </div>
       </div>
     </div>
-
+    <!-- Blog -->
     <div class="container m-auto pt-5">
       <h3>Criteria to Consider When Picking the Programming Course</h3>
       <p class="text-justify">
@@ -132,20 +120,19 @@
           id="heart"
         ></i
       ></a>
-      <label class="pl-2" id="output"></label> 
-      <a>      <i class="fa-regular fa-comment fa-xl ml-3" id="comment-btn" style="color: #d57250"></i>
+      <label class="pl-2" id="output"></label>
+      <a>
+        <i
+          class="fa-regular fa-comment fa-xl ml-3"
+          onclick="myFunction()"
+          style="color: #d57250"
+        ></i>
       </a>
       <label class="pl-2">Leave a comment</label>
     </div>
 
-    <!-- Comment   -->
-    <div class="container">
-      <p id="nameField"></p>
-      <p id="commentField"></p>
-    </div>
-
     <!-- Leave a Comment -->
-    <div class="container my-5 d-none" id="comment-div">
+    <div class="container my-5" id="comment-div">
       <form class="m-auto">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Name</label>
@@ -167,9 +154,16 @@
         </div>
 
         <button type="button" class="btn btn-primary" id="comment-btn">
-          Leave Comment
+          Comment
         </button>
       </form>
+    </div>
+
+    <!-- Comment   -->
+    <div class="container m-auto rounded" id="userComments">
+      <p id="nameField" class=""></p>
+      <p id="commentField"></p>
+      
     </div>
 
     <!-- Footer -->
@@ -180,6 +174,7 @@
       <p>Contact us | Terms & Conditions | privacy policy</p>
     </footer>
   </body>
+  <!-- JS  -->
   <script>
     // Comments Section
     document
@@ -202,9 +197,9 @@
     });
 
     // comment
-    document.getElementById("comment-btn").addEventListener("click", function () {
+    function myFunction() {
       //To Display Div
       document.getElementById("comment-div").style.display = "block";
-    });
+    }
   </script>
 </html>

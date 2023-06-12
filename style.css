@@ -45,9 +45,13 @@ body {
 }
 .hero p{
   color: var(--snow);
+  font-size: 1.5rem;
 }
 
 /* Cards */
+#title{
+  font-size: 4rem;
+}
 
 .link{
   color: var(--orange);
@@ -74,12 +78,20 @@ body {
 }
 .blog p{
   color: var(--snow);
+  font-size: 1.5rem;
 
 }
 #imp{
   height: 10vh;
   background-color: var(--light-purple);
   color: var(--snow);
+}
+#userComments{
+  background-color: rgb(235, 235, 235);
+}
+#nameField{
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 /* Footer */
