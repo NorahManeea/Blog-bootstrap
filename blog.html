@@ -31,10 +31,14 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Articles</a>
+              <a class="nav-link active" aria-current="page" href="#"
+                >Articles</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+              <a class="nav-link active" aria-current="page" href="#"
+                >Contact Us</a
+              >
             </li>
           </ul>
 
@@ -139,6 +143,7 @@
           <input
             type="text"
             class="form-control"
+            placeholder="Enter your name"
             id="InputName"
             aria-describedby="emailHelp"
           />
@@ -159,14 +164,10 @@
       </form>
     </div>
 
-    <!-- Comment   -->
-    <div class="container m-auto rounded" id="userComments">
-      <p id="nameField" class=""></p>
-      <p id="commentField"></p>
-      
-    </div>
-
+    <!-- Display Comments   -->
+    <div id="commentDiv" class="container"></div>
     <!-- Footer -->
+
     <footer class="py-5 text-center">
       <p>Copyright © 2023</p>
       <p>Kingdom of Saudi Arabia</p>
@@ -176,16 +177,31 @@
   </body>
   <!-- JS  -->
   <script>
-    // Comments Section
-    document
-      .getElementById("comment-btn")
-      .addEventListener("click", function () {
-        var name = document.getElementById("InputName").value;
-        var comment = document.getElementById("commentTextarea").value;
-        document.getElementById("nameField").innerHTML = name;
-        document.getElementById("commentField").innerHTML = comment;
-        console.log("button clicked");
-      });
+   
+    // comment Div Create
+    const username = document.getElementById("InputName");
+    const commentDes = document.getElementById("commentTextarea");
+    document.getElementById("comment-btn").onclick = () => {
+      const carddiv = document.createElement("div");
+      carddiv.classList.add("card");
+      carddiv.classList.add("mb-3");
+      //comment body Create
+      const cardbody = document.createElement("div");
+      cardbody.classList.add("card-body");
+      carddiv.append(cardbody);
+      // comment title
+      const h5 = document.createElement("h5");
+      h5.classList.add("card-title");
+      h5.textContent = username.value;
+      // comment  description
+      const p = document.createElement("p");
+      p.classList.add("card-text");
+      p.textContent = commentDes.value;
+      cardbody.append(h5);
+      cardbody.append(p);
+
+      document.getElementById("commentDiv").append(carddiv);
+    };
 
     // Like
     var i = 0;
