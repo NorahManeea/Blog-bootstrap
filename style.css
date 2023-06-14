@@ -30,18 +30,18 @@ body {
 
 .hero{
   padding: 15rem 0;
-  background-image: url('assets/bg.svg');
+  background-image: url('assets/Background.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  height: 90vh;
+  height: 70vh;
 
 }
 .hero h1{
   color: var(--snow);
   font-weight: bolder;
-  font-size: 15rem;
+  font-size: 10rem;
 }
 .hero p{
   color: var(--snow);
