@@ -30,7 +30,7 @@ body {
 
 .hero{
   padding: 15rem 0;
-  background-image: url('assets/Background.svg');
+  background-image: url('assets/bg.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
